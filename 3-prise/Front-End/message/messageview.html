@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mes Notes</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/tele.png" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link href="message/stylecss.css" type="text/css" rel="stylesheet"></link>
+  
+</head>
+
+<body>
+    <div class="container-fluid bg1">
+        <div class="row">
+            <div class="cold-md-4 col-sm-4 col-xs-12"></div>
+            <div class="cold-md-4 col-sm-4 col-xs-12">
+    
+                <form action="message/messageview.html" method="POST" class="form-container">
+                  <div class="form-group">
+                  <div><h1><center>Bienvenue</center></h1></div>
+                  <div class="container text-center">
+                  <div class="col-sm-3" id="notes">
+                  <h2 class="menuGauche"> Mes Notes</h2> <br>
+                  <div class="création">
+                  <button type="button" id="btnNew" name="button" class="btn btn-info btn-sm create" ng-click="">
+                  <span class="glyphicon glyphicon-plus"></button> Créer une nouvelle note
+                  </div><br>
+
+                  <div ng-repeat="note in notes" class="note1 note">
+                  <p class="title1">{{note.titre}} <button ng-click="detailNote(note)" type="button" id="btnDisplay" name="button" class="btn btn-default btn-sm" ng-click="displayNote()">
+                  <span class="glyphicon glyphicon-play"></span></button></p>
+                  <p class="descr1">{{note.contenu}}</p>
+                  </div>   
+                  </div>
+                  <div class="col-sm-9">
+                <textarea name="name" rows="1" cols="90" ng-model="titre" placeholder="Titre" maxlength="30" required></textarea>
+                <textarea name="name" rows="17" cols="90" ng-model="contenu" placeholder="Note" required></textarea><br><br>
+
+                <button type="button" class="btn btn-info btn-sm" ng-click=newNote(titre,contenu)>
+                  <span class="glyphicon glyphicon-ok"></span> Enregistrer
+                </button>
+                <button type="button" id="btnModify" class="btn btn-info btn-sm" ng-click="modifyNote()">
+                  <span class="glyphicon glyphicon-pencil"></span> Modifier
+                </button>
+                
+                </button>
+                </div>
+                </div>
+                </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

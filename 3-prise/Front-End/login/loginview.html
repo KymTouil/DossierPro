@@ -1,0 +1,24 @@
+
+<link href="login/css/global.css" type="text/css" rel="stylesheet"></link>
+<div class="container-fluid bg">
+    <div class="row">
+        <div class="cold-md-4 col-sm-4 col-xs-12"></div>
+        <div class="cold-md-4 col-sm-4 col-xs-12">
+
+            <form action="message/messageview.html" method="POST" class="form-container" >
+                <div class="form-group">
+                    <img src="login/css/images/logo.png" class="logo" >
+
+                    <h4><center>Accéder A Votre Espace</center></h4>
+                    <input ng-model="username" id="username"  type="text" name="username" class="form-control" placeholder="Email" value="username" onclick='javascript:this.value = "";this.type="text"'required  /><br>
+
+                    <input ng-model="password" id="password" class="form-control" type="text" name="password" value="password" placeholder="Mot De Passe" value="Mot de passe..." onclick='javascript:this.value = "password";this.type="password"' required  /><br>
+
+                    <button ng-click="sendData(username, password)" type="button" name="button" value="" class="btn btn-sucess btn-block">Valider</button><br/>
+                    <p id="param">Pas encore de compte?&ensp;<a ui-sref="nouveau">Créer votre Espace</a>
+                    </p>
+                </div>
+            </form >
+        </div>
+    </div>
+</div>

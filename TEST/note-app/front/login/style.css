@@ -1,0 +1,17 @@
+#connexion {
+  font-family: 'Leckerli One', cursive;
+  font-size: 55px;
+  text-align: left;
+}
+
+#param {
+  text-align: left;
+}
+
+button {
+  background-color: pink;
+}
+
+.jumbotron {
+  background-color: white;
+}

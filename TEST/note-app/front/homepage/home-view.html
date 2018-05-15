@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./homepage/stylecss.css">
+    <link href="https://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title></title>
+  </head>
+
+  <body>
+    <div class="jumbotron text-center">
+      </div>
+      <!-- <p class="title">Bienvenue {{username}} !</p> -->
+      <div class="container text-center">
+        <div class="row">
+
+          <div class="col-sm-3" id="notes">
+            <h2 class="menuGauche">Vos notes</h2> <br>
+              <div class="création">
+              <button type="button" id="btnNew" name="button" class="btn btn-info btn-sm create" ng-click="newNote()">
+              <span class="glyphicon glyphicon-plus"></button> Créer une nouvelle note
+              </div><br>
+
+              <div class="note1 note">
+              <p class="title1">Title <button type="button" id="btnDisplay" name="button" class="btn btn-default btn-sm" ng-click="displayNote()">
+              <span class="glyphicon glyphicon-play"></span></button></p>
+              <p class="descr1">Hello world, hello world hel...</p>
+              </div>
+
+              <div class="note2 note">
+              <p class="title2">Title <button type="button" name="button" class="btn btn-default btn-sm" ng-click="displayNote()">
+              <span class="glyphicon glyphicon-play"></span></button></p></p>
+              <p class="descr2">Hello world, hello world hel...</p>
+              </div>
+
+              <div class="note3 note">
+              <p class="title3">Title <button type="button" name="button" class="btn btn-default btn-sm" ng-click="displayNote()">
+              <span class="glyphicon glyphicon-play"></span></button></p></p>
+              <p class="descr3">Hello world, hello world hel...</p>
+              </div><br>
+          </div>
+              <div class="col-sm-9">
+                <textarea name="name" rows="1" cols="90" ng-model="titleNote" placeholder="Votre titre" maxlength="30" required></textarea>
+                <textarea name="name" rows="17" cols="90" ng-model="contentNote" placeholder="Votre note" required></textarea><br><br>
+
+                <button type="button" class="btn btn-info btn-sm">
+                  <span class="glyphicon glyphicon-ok"></span> Enregistrer
+                </button>
+                <button type="button" id="btnModify" class="btn btn-info btn-sm" ng-click="modifyNote()">
+                  <span class="glyphicon glyphicon-pencil"></span> Modifier
+                </button>
+                <button type="button" id="btnDelete" class="btn btn-info btn-sm" ng-click="deleteNote()">
+                  <span class="glyphicon glyphicon-trash"></span> Supprimer
+                </button>
+              </div>
+            </div>
+          </div>
+
+  </body>
+</html>

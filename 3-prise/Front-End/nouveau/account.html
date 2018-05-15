@@ -1,0 +1,40 @@
+ <link href="nouveau/css/global.css" type="text/css" rel="stylesheet"></link>
+    <div class="container-fluid bg">
+        <div class="row">
+            <div class="cold-md-4 col-sm-4 col-xs-12"></div>
+            <div class="cold-md-4 col-sm-4 col-xs-12">
+
+                <form action="message/messageview.html" class="form-container" >
+                    <div class="form-group">
+                        <img src="nouveau/css/images/logo.png" class="logo">
+                        <h4><center>Créer Un Compte</center></h4>
+                        <input class="form-control" ng-model="username" name="nom" placeholder="username" required><br>
+
+                        
+                        <div id="divcomp">
+                        <input class="form-control" ng-model="password" type="password" id="password" name="password" placeholder="Mot De Passe" value="password" required><br>
+                        <input class="form-control" ng-model="rpassword"  type="password" name="rpassword" id="rpassword" placeholder="Confirmation du Mot De Passe" value="rpassword" required ng-change="checkPass()"><br>
+                        </div>
+
+
+                        <input class="form-control" ng-model="email" type="email" name="email" placeholder="Email" required><br>
+                        <input class="form-control" ng-model="firstname" name="firstname" placeholder="Nom" required><br>
+                        <input class="form-control" ng-model="lastname" name="lastname" placeholder="Prénom" required><br>
+                        <button class="btn btn-sucess btn-block" type="submit" ng-click="create()">S'inscrire</button><br>
+                        <a ui-sref="login">Retour</a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <script>
+    new Vue({
+        el: "#app", data: {
+            image: "images/back.jpeg"
+        }
+    })
+</script> -->

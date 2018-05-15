@@ -1,0 +1,50 @@
+<form action="messageview.html" method="POST" class="form-container">
+                    <div class="form-group">
+                        <img src="nouveau/css/images/logo.png" class="logo">
+                        <h4><center>Créer Un Compte</center></h4>
+                        <input class="form-control" ng-model="username" name="nom" placeholder="username" required><br>
+                        <input class="form-control" ng-model="password" type="password" name="prenom" placeholder="Mot De Passe" required><br>
+                        <input class="form-control" ng-model="rpassword"  type="password" name="rpassword" placeholder="Confirmation du Mot De Passe" required><br>
+                        <input class="form-control" ng-model="email" type="email" name="email" placeholder="Email" required><br>
+                        <input class="form-control" ng-model="firstname" name="firstname" placeholder="Nom" required><br>
+                        <input class="form-control" ng-model="lastname" name="lastname" placeholder="Prénom" required><br>
+                        <button class="btn btn-sucess btn-block" type="submit" onclick="create()">S'inscrire</button><br>
+                        <a ui-sref="login">Retour</a>
+                    </div>
+                </form>
+
+
+
+                angular.module('note').controller('createController', function($scope, $http){
+  
+templateUrl: "nouveau/account.html",
+
+  $scope.create = _create;
+  function _create() {
+   
+    if ($scope.username && $scope.password) {
+      var newUser = {
+         username: body.username,
+         password: body.password,
+         email: body.email,
+         firstName: body.firstName,
+         lastName: body.lastName,
+         age: body.age,
+         notes:[{datecreation:body.creation,datemodification:body.modification,titre:body.titre,contenu:body.contenu}
+             ]};
+      };
+
+      $http.post('http://localhost:8000/create-account', newUser).then(
+        function(response) {
+          alert('votre compte a bien été créé');
+        },
+        function(response) {
+          alert(response.data);
+        }
+      );
+    }
+    else {
+      alert('merci de renseigner les champs obligatoires');
+    }
+  };
+});
